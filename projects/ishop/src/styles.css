@@ -1,0 +1,207 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+:root {
+--theme-bg-color: #0F1111;
+--theme-color: white;
+}
+* { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+  }
+body{
+  background-color: #f3f3f3 !important;
+}
+  .ishop-navbar {
+    display: flex;
+    box-shadow: 0 0 2px 0 grey;
+    align-items: center;
+    font-size: 1em;
+    padding: 0px !important;
+    background-color:#3761af;
+    background-color: var(--theme-bg-color);
+    color: white;
+    color: var(--theme-color);
+  }
+  .navbar-nav .nav-item .dropdown-toggle::after{
+    content: unset;
+  }
+  .item{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    color: var(--theme-color); 
+  }
+  
+  .item.right {
+    margin: 0 0 0 auto;
+  }
+  
+  .navbar .logo {
+    font-size: 1.2em;
+    align-items: center;
+    display: flex;
+  }
+  
+  .logo img {
+    max-width: 145px;
+  }
+  .item.search {
+    transition: 0.2s linear;
+    display:flex;
+    justify-content: center;
+    flex-grow:1;   
+  }
+  .item.search .search-icon {
+    border-left: 1px solid grey;
+    padding: 5px 10px;
+    margin-right: 5px;
+    font-size: 20px;
+    cursor:pointer;
+    color: grey;
+  }
+  .item.search .search-icon:hover {   
+    color: black;
+  }
+  
+  .item.search input {
+    width: 100%;
+    padding: 6px ;
+    outline: none;
+    border: 2px solid grey; 
+    max-width: 100%;
+    border: 0;
+  }
+  
+  .item .search-group {
+    display:flex;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 20px;
+    border: 2px solid grey;
+    overflow: hidden;
+    background: white;    
+    border-color: white;
+    color: var(--theme-color);  
+  }
+  .item .search-group select{
+    border: 0;
+    margin-left: 10px;
+    border-right: 1px solid grey;
+    max-width: 8em;
+    outline: none;
+    color: grey;    
+  }
+  .item .search-group select:focus{
+    box-shadow: unset !important;
+  }
+  .item .group {
+    display:flex;
+    align-items: center;
+    font-size: 0.9em;
+  }
+   
+  .item .group .sub{
+    font-size: 0.8em; 
+  }
+  
+  .material-icons {
+    font-size:1.5rem;
+    padding: 5px 10px;
+  }
+ 
+  .menu-icon{
+    display:none;
+  }
+
+  .product-card {
+    width: 260px !important;
+    border: 0px !important;
+    border-radius: 5px;
+  }
+
+  .product-card .product-img {
+    height: 220px;
+    width: 100%;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .product-card .product-header {
+    background-color: #fcfcfc;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 1px solid #e4e4e4 !important;
+    border-bottom: 1px solid #e4e4e4 !important;
+    border-right: 1px solid #e4e4e4 !important;
+  }
+
+  .product-card .product-header .product-title p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #494949;
+  }
+
+  .product-card .product-header .product-title {
+    height: 45px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  .product-card .product-header .product-price p{
+    font-size: 18px;
+    color: #454545;
+    font-weight: 900;
+  }
+  .product-card .product-header .product-rate {
+    width: 45px;
+    font-size: 10px;
+    background-color: #388e3c;
+    padding: 5px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .push{
+    margin-left: auto;
+  }
+
+  .product-card .product-header .product-left{
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .cart-buy-buttons{
+    margin-top: 10px;
+  }
+  .cart-buy-buttons .buttons .btn{
+    font-size: 12px !important;
+    border-radius: unset;
+    color: #fbfbfb;
+  }
+
+  .cart-buy-buttons .buttons .btn-warning{
+    background-color: #ff9f00;
+  }
+
+  .cart-buy-buttons .buttons .btn-danger{
+    background-color: #fb641b;
+  }
+  .signup-pannel {
+    width: 600px;
+    margin: 20px;
+  }
+  @media (max-width: 700px) {
+    .item.search input {
+      display: none;
+    }
+    .menu-icon {
+      display:block;
+    }
+    .detail,.logo .text {
+      display:none;
+    }
+  
+  
+}

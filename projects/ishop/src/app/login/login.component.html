@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="signup-pannel">
+            <form #frmLoginCustomer="ngForm" (submit)="onLoginCustomerClick(frmLoginCustomer.value)">
+                <div class="form-group mt-3">
+                    <label for="userName">User Name</label>
+                    <input type="text" name="userName" ngModel #userName="ngModel" id="userName" class="form-control" placeholder="User Name">
+                </div>
+                <div class="form-group mt-3">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" ngModel #password="ngModel" id="password" class="form-control" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-top: 10px">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>
