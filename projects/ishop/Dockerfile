@@ -8,7 +8,7 @@ COPY ./ /usr/local/app
 
 RUN npm install
 
-RUN npm run build
+RUN npm run build --project=ishop
 
 # Serve angular app with nginx server
 
