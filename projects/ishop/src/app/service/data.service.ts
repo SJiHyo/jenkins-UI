@@ -6,7 +6,7 @@ import { Observable } from 'rxjs'
   providedIn: 'root'
 })
 export class DataService {
-  private baseURL = "http://localhost:8080";
+  private baseURL = "http://localhost:6500";
   constructor(private http: HttpClient){}
 
   GetAllProducts():Observable<any[]> {
