@@ -15,3 +15,5 @@ RUN npm run build --project=ishop
 FROM nginx:latest
 
 COPY --from=build /usr/local/app/dist/ishop /usr/share/nginx/html
+
+EXPOSE 80
