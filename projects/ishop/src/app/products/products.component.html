@@ -1,3 +1,4 @@
+<app-navbar (searchTextChanged)="onSearchTextEntered($event)"></app-navbar>
 <div class="container-fluid mt-5">
     <div class="row">
         <div class="col-md-3">
@@ -6,28 +7,30 @@
         <div class="col-md-9">
             <div class="d-flex flex-wrap">
                 <div *ngFor="let item of products" class="card product-card m-2">
-                    <img [src]="item.image" class="card-img-top product-img">
-                    <div class="card-header product-header">
-                        <div class="product-title">
-                            <p>{{item.title}}</p>
-                        </div>
-                        <div class="product-price">
-                            <p>{{item.price}} USD</p>
-                        </div>
-                        <div class="product-rating d-flex flex-wrap">
-                            <div class="product-rate">
-                                {{item.rating}} <i class="bi bi-star-fill"></i>
+                    <div *ngIf="searchText === '' || item.title.toLowerCase().includes(searchText)">
+                        <img [src]="item.image" class="card-img-top product-img">
+                        <div class="card-header product-header">
+                            <div class="product-title">
+                                <p>{{item.title}}</p>
                             </div>
-                            <div class="push">
+                            <div class="product-price">
+                                <p>{{item.price}} USD</p>
+                            </div>
+                            <div class="product-rating d-flex flex-wrap">
+                                <div class="product-rate">
+                                    {{item.rating}} <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="push">
 
+                                </div>
+                                <div class="product-left">
+                                    {{item.count}} Left
+                                </div>
                             </div>
-                            <div class="product-left">
-                                {{item.count}} Left
-                            </div>
-                        </div>
-                        <div class="cart-buy-buttons">
-                            <div class="buttons">
-                                <button class="btn btn-warning"><i class="bi bi-cart3"></i> ADD TO CART</button>
+                            <div class="cart-buy-buttons">
+                                <div class="buttons">
+                                    <button class="btn btn-warning"><i class="bi bi-cart3"></i> ADD TO CART</button>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -14,4 +14,11 @@ export class ProductsComponent implements OnInit{
     this.data.GetAllProducts().subscribe(product => this.products = product);
   }
 
+  searchText: string = '';
+
+  onSearchTextEntered(searchValue: string){
+    this.searchText = searchValue;
+    // console.log(this.searchText);
+  }
+
 }

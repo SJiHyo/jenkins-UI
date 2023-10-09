@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { DataService } from '../service/data.service';
-import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-navbar',
@@ -15,5 +15,14 @@ export class NavbarComponent {
 
   ngOnInit(): void {
     this.data.GetAllCategories().subscribe(category => this.categories = category);
+  }
+
+  enteredSearchValue: string = '';
+
+  @Output()
+  searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
+
+  onSearchTextChanged(){
+    this.searchTextChanged.emit(this.enteredSearchValue);
   }
 }
