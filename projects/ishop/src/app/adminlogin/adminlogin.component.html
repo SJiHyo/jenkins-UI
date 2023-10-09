@@ -1,1 +1,17 @@
-<p>adminlogin works!</p>
+<div class="container">
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="signup-pannel">
+            <form #frmLoginAdmin="ngForm" (submit)="onLoginAdminClick(frmLoginAdmin.value)">
+                <div class="form-group mt-3">
+                    <label for="adminUserName">User Name</label>
+                    <input type="text" name="adminUserName" ngModel #adminUserName="ngModel" id="adminUserName" class="form-control" placeholder="User Name">
+                </div>
+                <div class="form-group mt-3">
+                  <label for="AdminPassword">Password</label>
+                  <input type="password" name="AdminPassword" ngModel #AdminPassword="ngModel" id="AdminPassword" class="form-control" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-top: 10px">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>

@@ -21,8 +21,12 @@ export class DataService {
     return this.http.post<any>(`${this.baseURL}/saveCustomer`, data);
   }
 
-  GetCustomer():Observable<any[]>{
+  GetCustomers():Observable<any[]>{
     return this.http.get<any[]>(`${this.baseURL}/getAllCustomers`);
+  }
+
+  GetAdmins():Observable<any[]>{
+    return this.http.get<any[]>(`${this.baseURL}/getAllAdmins`);
   }
 
 }

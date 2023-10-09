@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit{
   Customers:any[] = [];
   
   ngOnInit(): void {
-    this.data.GetCustomer().subscribe(customer => {
+    this.data.GetCustomers().subscribe(customer => {
       this.Customers = customer;
     });
   }
