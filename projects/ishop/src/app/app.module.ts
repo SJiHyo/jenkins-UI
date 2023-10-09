@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     ProductsComponent,
     SignupComponent,
     LoginComponent,
-    AdminloginComponent
+    AdminloginComponent,
+    FooterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
