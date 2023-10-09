@@ -14,17 +14,22 @@ export class LoginComponent implements OnInit{
   Customers:any[] = [];
   
   ngOnInit(): void {
-    this.data.GetCustomer().subscribe(customer => this.Customers=customer);
+    this.data.GetCustomer().subscribe(customer => {
+      this.Customers = customer;
+    });
   }
-  onLoginCustomerClick(data:any){
-    for(var customer of this.Customers){
-      if(customer.userName==data.userName && customer.password==data.password){
-        this.router.navigate(['products']);
-        break;
-      }else{
-        alert('Invalid Login');
-        this.router.navigate(['products']);
-      }
-    }
+  
+  onLoginCustomerClick(data: any) {  
+    const customer = this.Customers.find(
+      c => c.usertName === data.userName && c.password === data.password
+    );    
+    
+    if (customer) {
+      // Valid login, navigate to 'products'
+      this.router.navigate(['products']);
+    } else {
+      // Invalid login, show an alert
+      alert('Invalid Login');
+    }   
   }
 }
