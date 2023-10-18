@@ -1,0 +1,6 @@
+{
+    "/products": {
+    "target": "http://172.16.1.121:6500",
+    "secure": false
+    }
+}
