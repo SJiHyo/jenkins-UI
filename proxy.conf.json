@@ -1,6 +1,16 @@
 {
-    "/products": {
+    "/getAllProducts": {
     "target": "http://172.16.1.121:6500",
-    "secure": false
-    }
+    "pathRewrite": {
+        "^/getAllProducts": ""
+        },
+        "changeOrigin": true
+    },
+    "/getAllCategories": {
+        "target": "http://172.16.1.121:6500",
+        "pathRewrite": {
+          "^/getAllCategories": ""
+        },
+        "changeOrigin": true
+      }
 }
