@@ -12,6 +12,7 @@
     <div class="item search right" tabindex="0">
       <div class="search-group">
         <select class="form-select">
+          <option value="All">All</option>
           <option *ngFor="let item of categories" value="{{item.category}}">{{item.category}}</option>
         </select>
         <input type="text" class="form-control" [(ngModel)]="enteredSearchValue" (input)="onSearchTextChanged()">
