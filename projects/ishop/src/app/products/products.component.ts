@@ -20,5 +20,6 @@ export class ProductsComponent implements OnInit{
     this.searchText = searchValue;
     // console.log(this.searchText);
   }
+  
 
 }
